@@ -40,5 +40,6 @@ namespace BankProject.Controllers
             HttpContext.Session.Clear();
             return RedirectToAction("Login", "Account");
         }
+        //deneme test
     }
 }
