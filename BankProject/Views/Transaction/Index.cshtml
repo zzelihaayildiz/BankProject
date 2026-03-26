@@ -1,0 +1,27 @@
+﻿@model List<BankProject.Models.Transaction>
+
+<h2>İşlemler</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Gönderen Hesap</th>
+            <th>Alıcı Hesap</th>
+            <th>Tutar</th>
+            <th>Tarih</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.Id</td>
+                <td>@t.FromAccountId</td>
+                <td>@t.ToAccountId</td>
+                <td>@t.Amount</td>
+                <td>@t.Date.ToString("dd.MM.yyyy HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

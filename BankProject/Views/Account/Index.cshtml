@@ -1,0 +1,25 @@
+﻿@model List<BankProject.Models.Account>
+
+<h2>Hesaplar</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Hesap Numarası</th>
+            <th>Bakiye</th>
+            <th>Müşteri ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model)
+        {
+            <tr>
+                <td>@account.Id</td>
+                <td>@account.AccountNumber</td>
+                <td>@account.Balance</td>
+                <td>@account.CustomerId</td>
+            </tr>
+        }
+    </tbody>
+</table>
